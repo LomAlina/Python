@@ -7,6 +7,6 @@ list_0 = [2, 3, 5, 9, 3]
 print(list_0)
 sum = 0
 for i in range(len(list_0)):
-    if i %  2 != 0:
+    if i % 2 != 0:
         sum = sum + list_0[i]
 print(f'Сумма элементов, стоящих на нечётной позиции = ', sum)
