@@ -14,8 +14,8 @@ pathWrite = r'newtext.txt'
 for _ in range(size):
     string += f'{random.randint(1,9999)}'
 
-with open(path, 'w', encoding='UTF-8') as data:
-    data.write(string[-1])
+# with open(path, 'w', encoding='UTF-8') as data:
+#     data.write(string[-1])
 
 with open(path, 'r', encoding='UTF-8') as data:
     data_file = data.readline()
