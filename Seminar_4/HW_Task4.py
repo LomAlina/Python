@@ -40,13 +40,13 @@ def createEquation(equation: dict):
 def printEquation(equation: str):
     print(equation.replace('*x^1', 'x').replace('*x^0', '') + ' = 0')
 
-print(createEquation(createDict()))
+print(createEquation(createDict()).replace(' + ', '+'))
 
 equation = '1*x^9 - 10*x^7 + 7*x^6 + 8*x^5 + 3*x^4 + 6*x^3 + 7*x^2 - 7*x^1 - 5*x^0'
 
 def parseEquation(equation: str):
     eqDict = {}
-    equation.replace(' + ', ' +').replace(' - ', ' -')
+    equation = equation.replace(' + ', ' +').replace(' - ', ' -')
     equation = equation.split()
     
     for i in equation:
