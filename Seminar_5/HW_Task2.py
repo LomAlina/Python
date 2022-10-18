@@ -71,9 +71,9 @@ def player_vs_player():
             print('Ну вот и все, закончились конфетки')
 
     if count == 1:
-        print(f'{loser} ПОБЕДИЛ(А)')
+        print(f'{loser} ПОБЕДИЛ')
     if count == 0:
-        print(f'{lucky} ПОБЕДИЛ(А)')
+        print(f'{lucky} ПОБЕДИЛ')
 
 player_vs_player()
 
