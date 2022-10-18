@@ -60,7 +60,7 @@ def game(board):
                 vic = True
                 break
             if counter == 9:
-                print('Победила, ДРУЖБА!)')
+                print('Победила Дружба!)')
         design_board(board)
 
 game(board)
