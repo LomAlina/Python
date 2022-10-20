@@ -4,10 +4,21 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-num = input("Введите вещественное число: ")
+# num = input("Введите вещественное число: ")
+# num = str(num)
+# summa = 0
+# for i in num:
+#     if i != ".":
+#         summa += int(i)
+# print(f"Сумма цифр числа {num} = ", summa)
+
+
+num = 0,56
 num = str(num)
-summa = 0
+summa: int = 0
 for i in num:
-    if i != ".":
+    print(i.isdigit())
+    if i.isdigit():
         summa += int(i)
-print(f"Сумма цифр числа {num} = ", summa)
+
+print(summa)
