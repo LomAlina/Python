@@ -1,9 +1,11 @@
+import View
+
 first = 0
 second = 0
 result = 0
 
 listOperator = {'*': lambda x,y: int(x) * int(y),
-                '/': lambda x,y: int(x) / int(y),
+                '/': lambda x,y: (int(x) / int(y)) if int(y) != 0 else View.division_be_zero(),
                 '+': lambda x,y: int(x) + int(y),
                 '-': lambda x,y: int(x) - int(y)}
 

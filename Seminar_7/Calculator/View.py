@@ -11,8 +11,9 @@ def InputOperator():
     oper = input(f'Введите оператор: ')
     return oper
 
-def division_by_zero():
-    print('Деление на ноль!!')
+def division_be_zero():
+    print("Деление на ноль!")
+    exit()
 
 def print_window(result):
     win = tk.Tk()
