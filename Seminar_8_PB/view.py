@@ -1,3 +1,5 @@
+import controller
+
 def show_menu():
     print('0. Показать все контакты')
     print('1. Открыть файл с контактами')
@@ -7,8 +9,8 @@ def show_menu():
     print('5. Удалить контакт')
     print('6. Поиск по контактам')
 
-    choise = int(input('Введите пункт меню: '))
-    return choise
+    choice = int(input('Введите пункт меню: '))
+    return choice
 
 def show_phone_book(phone_book):
     if len(phone_book) < 1:
@@ -18,6 +20,8 @@ def show_phone_book(phone_book):
             print(id, *item)
 
 def input_path():
+    # global path
+    # path = ''
     path = input('Введите имя файла: ')
     return path
 
@@ -30,6 +34,21 @@ def input_contact():
 def input_change():
     id = int(input('Введите номер контакта: '))
     print('Что изменить?')
-    choise = input('0 - ФИО, 1 - Телефон, 2 - Комментарий, 3 - Отмена')
+    choice = input('0 - ФИО, 1 - Телефон, 2 - Комментарий, 3 - Отмена')
     value = input('Введите изменения: ')
-    return(id, choise, value)
+    return(id, choice, value)
+
+def input_delete():
+    id = int(input('Введите номер контакта для удаления: '))
+    return id
+
+def input_search():
+    print('По какому пункту выполнить поиск?')
+    choiсe = input('0 - ФИО, 1 - Телефон, 2 - Комментарий: ')
+    value = input('Введите искомое значение: ')
+    return (choiсe, value)
+
+def output_search(search_result):
+    print('Результаты поиска: ')
+    for i in range(0, len(search_result)-1, 2):
+        print(search_result[i], *search_result[i+1])
